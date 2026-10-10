@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Text Summarizer — Summarize anything in seconds</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: #0f0f14; color: #e8e8ec; line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
+  .badge { display: inline-block; background: #1e1e2a; border: 1px solid #33334a;
+           border-radius: 999px; padding: 4px 14px; font-size: 13px; color: #b9b9d0;
+           margin-bottom: 24px; }
+  h1 { font-size: 44px; line-height: 1.15; margin-bottom: 16px; }
+  h1 span { color: #d97757; }
+  p.lead { font-size: 19px; color: #b9b9d0; margin-bottom: 32px; }
+  .btns { display: flex; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
+  .btn { padding: 12px 24px; border-radius: 8px; text-decoration: none;
+         font-weight: 600; font-size: 15px; }
+  .btn-primary { background: #d97757; color: #fff; }
+  .btn-ghost { border: 1px solid #33334a; color: #e8e8ec; }
+  pre { background: #16161f; border: 1px solid #2a2a3a; border-radius: 10px;
+        padding: 20px; overflow-x: auto; font-size: 14px; margin-bottom: 40px; }
+  code { color: #7ee0a3; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
+  .card { background: #16161f; border: 1px solid #2a2a3a; border-radius: 10px; padding: 20px; }
+  .card h3 { font-size: 16px; margin-bottom: 6px; }
+  .card p { font-size: 14px; color: #b9b9d0; }
+  footer { color: #6b6b85; font-size: 13px; text-align: center; margin-top: 32px; }
+  footer a { color: #d97757; }
+  @media (max-width: 560px) { h1 { font-size: 32px; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="badge">⚡ Open source · MIT licensed · Powered by Claude</div>
+  <h1>Summarize anything<br>in <span>seconds.</span></h1>
+  <p class="lead">AI Text Summarizer is a lightweight command-line tool that turns long
+     documents, notes and transcripts into clean summaries using the Claude API.</p>
+  <div class="btns">
+    <a class="btn btn-primary" href="https://github.com/coding-programming473/ai-text-summarizer">View on GitHub</a>
+    <a class="btn btn-ghost" href="https://github.com/coding-programming473/ai-text-summarizer#getting-started">Get Started</a>
+  </div>
+  <pre><code>$ pip install -r requirements.txt
+$ export ANTHROPIC_API_KEY="sk-ant-..."
+$ python summarizer.py file report.txt --bullets
+
+• Revenue grew 18% QoQ driven by enterprise plans
+• Churn dropped to 2.1%, lowest in company history
+• ...</code></pre>
+  <div class="grid">
+    <div class="card"><h3>📄 Files &amp; pipes</h3><p>Summarize .txt/.md files or pipe any text through stdin.</p></div>
+    <div class="card"><h3>🎨 4 styles</h3><p>Bullets, brief, detailed reports, or TL;DR — your call.</p></div>
+    <div class="card"><h3>📏 Length control</h3><p>Cap summaries with --max-words. Save with --output.</p></div>
+    <div class="card"><h3>🪶 Zero bloat</h3><p>One Python file, one dependency. No servers, no frameworks.</p></div>
+  </div>
+  <footer>Built with the <a href="https://www.anthropic.com">Claude API</a> ·
+  <a href="https://github.com/coding-programming473/ai-text-summarizer">GitHub</a> · MIT License</footer>
+</div>
+</body>
+</html>
